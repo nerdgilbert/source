@@ -257,6 +257,7 @@ platform_check_image() {
 	nanostation-m|\
 	nbg460n_550n_550nh|\
 	pqi-air-pen|\
+	rambutan|\
 	r602n|\
 	rocket-m-ti|\
 	rocket-m-xw|\
@@ -663,6 +664,7 @@ platform_pre_upgrade() {
 	c-60|\
 	nbg6716|\
 	r6100|\
+	rambutan|\
 	rb-411|\
 	rb-411u|\
 	rb-433|\

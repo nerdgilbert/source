@@ -69,6 +69,9 @@ case "$FIRMWARE" in
 		ath9k_patch_firmware_mac $(macaddr_add $(mtd_get_mac_binary_ubi board-config 102) +1)
 		;;
 	r6100 | \
+	rambutan)
+		ath9k_eeprom_extract "art" 4096 2048
+		;;
 	wndr3700v4 | \
 	wndr4300)
 		ath9k_eeprom_extract "caldata" 4096 2048

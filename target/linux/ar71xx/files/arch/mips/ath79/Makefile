@@ -150,6 +150,7 @@ obj-$(CONFIG_ATH79_MACH_PQI_AIR_PEN)		+= mach-pqi-air-pen.o
 obj-$(CONFIG_ATH79_MACH_QIHOO_C301)		+= mach-qihoo-c301.o
 obj-$(CONFIG_ATH79_MACH_R602N)			+= mach-r602n.o
 obj-$(CONFIG_ATH79_MACH_R6100)			+= mach-r6100.o
+obj-$(CONFIG_ATH79_MACH_RAMBUTAN)			+= mach-rambutan.o
 obj-$(CONFIG_ATH79_MACH_RB2011)			+= mach-rb2011.o
 obj-$(CONFIG_ATH79_MACH_RB4XX)			+= mach-rb4xx.o
 obj-$(CONFIG_ATH79_MACH_RB750)			+= mach-rb750.o

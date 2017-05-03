@@ -13,6 +13,23 @@ endef
 
 TARGET_DEVICES += c-60
 
+define Device/rambutan
+  DEVICE_PROFILE := RAMBUTAN
+  BOARDNAME = RAMBUTAN
+  CONSOLE = ttyS0,115200
+  MTDPARTS = ar934x-nfc:3m(u-boot)ro,2m(u-boot-env),1m(art),122m(ubi)
+  UBIFS_OPTS = -m 2048 -e 124k -c 950 -U -F
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  KERNEL_IN_UBI := 1
+  UBI_NO_EOF := 1
+  IMAGES := nand-factory.ubi nand-sysupgrade.tar
+  IMAGE/nand-factory.ubi := append-ubi
+  IMAGE/nand-sysupgrade.tar := sysupgrade-nand
+endef
+
+TARGET_DEVICES += rambutan
+
 define Device/domywifi-dw33d
   DEVICE_TITLE := DomyWifi DW33D
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-storage kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
